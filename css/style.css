@@ -101,11 +101,6 @@ body {
 
 /*=======================index.html=====================*/
 
-h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 0;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -143,6 +138,10 @@ img {
   margin-right: 40px;
 }
 
+.header-logo img {
+  width: 161px;
+}
+
 .header-logo-catalog:hover {
   opacity: 0.8;
 }
@@ -155,7 +154,7 @@ img {
 
 .main-navigation {
   float: left;
-  width: 600px;
+  width: 602px;
   text-align: right;
 }
 
@@ -176,10 +175,14 @@ img {
 
 .main-navigation a {
   display: block;
-  margin-top: 73px;
-  margin-left: 46px;
+  margin-top: 74px;
+  margin-left: 47px;
   color: #000000;
   text-decoration: none;
+}
+
+.main-navigation-contact {
+  margin-left: 1px;
 }
 
 .main-navigation a:hover {
@@ -196,22 +199,23 @@ img {
 
 .main-navigation .active-3::after {
   position: absolute;
-  content: "";
   bottom: -5px;
   right: 0px;
+  content: "";
   width: 74px;
   height: 2px;
   background-color: #fb565a;
 }
 
-.main-navigation .active-3 a:hover {
+.active-3 a:hover {
   color: #000000;
 }
 /*==========================================================*/
 
 .user-block {
   float: right;
-  margin-top: 73px;
+  max-width: 160px;
+  margin-top: 74px;
 }
 
 .login {
@@ -236,9 +240,9 @@ img {
 
 .login::before {
   position: absolute;
-  content: "";
   top: 8px;
   left: 10px;
+  content: "";
   width: 15px;
   height: 15px;
   background: url("../img/sprite.png") no-repeat;
@@ -315,7 +319,7 @@ img {
 
 .statement {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
   padding: 0;
   font-size: 55px;
   font-weight: 500;
@@ -395,7 +399,7 @@ img {
 }
 
 .features-title {
-  margin-top: 20px;
+  margin-top: 21px;
   margin-bottom: 15px;
   font-size: 24px;
   font-weight: 700;
@@ -403,7 +407,7 @@ img {
 }
 
 .features p {
-  margin-bottom: 31px;
+  margin-bottom: 32px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -454,23 +458,23 @@ img {
 
 .index-content-left {
   float: left;
-  width: 760px;
+  width: 660px;
 }
 
 .index-content-left .statement {
-  margin-top: 76px;
-  margin-bottom: 31px;
+  margin-top: 74px;
+  margin-bottom: 33px;
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
 }
 
 .index-content-left .declaration {
-  margin-bottom: 37px;
+  margin-bottom: 39px;
 }
 
 .subtitle {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -492,15 +496,15 @@ img {
 }
 
 .list {
-  margin-bottom: 23px;
+  margin-bottom: 24px;
   padding-left: 36px;
 }
 
 .list::before {
   position: absolute;
-  content: "";
   top: 11px;
   left: 1px;
+  content: "";
   width: 25px;
   height: 2px;
   background-color: #fb565a;
@@ -517,11 +521,12 @@ img {
   width: 360px;
   height: 208px;
   margin-top: 40px;
-  margin-bottom: 34px;
+  margin-bottom: 36px;
 }
 
 .index-content-right .subtitle {
-  margin-bottom: 44px;
+  margin-bottom: 41px;
+  padding-left: 3px;
   text-align: center;
 }
 
@@ -529,16 +534,26 @@ img {
   display: table;
   content: "";
   clear: both;
-  margin-bottom: 74px;
+  margin-bottom: 75px;
 }
 
 .block {
   float: left;
-  width: 120px;
+  width: 119px;
 }
 
 .block-upper {
   margin-bottom: 19px;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.block-upper span {
+  vertical-align: top;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 27px;
 }
 
 .block-lower {
@@ -560,23 +575,83 @@ img {
   content: "";
   clear: both;
   height: 2px;
-  margin-top: 44px;
+  margin-top: 40px;
   background-color: #eeeeee;
 }
 
-.partners-logo {
+.partner {
+  position: relative;
   display: inline-block;
   vertical-align: top;
+}
+
+.partner-1 {
+  margin-left: 31px;
+  margin-right: 93px;
+  padding-top: 62px;
+}
+
+.partner-2 {
+  margin-right: 99px;
+  padding-top: 46px;
+}
+
+.partner-3 {
+  margin-right: 117px;
+  padding-top: 65px;
+}
+
+.partner-4 {
+  padding-top: 52px;
+}
+
+.partner-1::after,
+.partner-2::after,
+.partner-3::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 52px;
+  background: #eeeeee;
+}
+
+.partner-1::after {
+  bottom: 18px;
+  right: -51px;
+}
+
+.partner-2::after {
+  bottom: 24px;
+  right: -46px;
+}
+
+.partner-3::after {
+  bottom: 5px;
+  right: -58px;
+}
+
+.partners-logo {
   opacity: 0.2;
 }
 
-.line {
-  display: inline-block;
-  vertical-align: top;
-  width: 2px;
+.partners-logo-1 {
+  width: 199px;
+  height: 68px;
+}
+
+.partners-logo-2 {
+  width: 209px;
+  height: 86px;
+}
+
+.partners-logo-3 {
+  width: 185px;
   height: 52px;
-  margin-top: 64px;
-  background: #eeeeee;
+}
+
+.partners-logo-4 {
+  width: 173px;
+  height: 84px;
 }
 
 .partners-logo:hover {
@@ -587,42 +662,11 @@ img {
   opacity: 0.1;
 }
 
-.partners-logo-1 {
-  width: 199px;
-  height: 68px;
-  margin-top: 62px;
-  margin-left: 31px;
-  margin-right: 46px;
-}
-
-.partners-logo-2 {
-  width: 209px;
-  height: 86px;
-  margin-top: 46px;
-  margin-left: 41px;
-  margin-right: 40px;
-}
-
-.partners-logo-3 {
-  width: 185px;
-  height: 52px;
-  margin-top: 65px;
-  margin-left: 53px;
-  margin-right: 52px;
-}
-
-.partners-logo-4 {
-  width: 173px;
-  height: 84px;
-  margin-top: 52px;
-  margin-left: 59px;
-}
-
 /*================footer-map========================*/
 
 .section-footer-map {
   height: 416px;
-  background: url("../img/map-marker.png") center top no-repeat;
+  background: #f1efe8 url("../img/map-marker.png") center top no-repeat;
 }
 
 /*================footer-map-inner========================*/
@@ -644,9 +688,9 @@ img {
   top: -362px;
   z-index: 5;
   width: 319px;
-  height: 308px;
   padding: 0 50px;
-  padding-top: 49px;
+  padding-top: 31px;
+  padding-bottom: 47px;
   background: #ffffff;
   box-sizing: border-box;
 }
@@ -686,7 +730,7 @@ img {
 }
 
 .footer-content .statement {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
@@ -721,6 +765,7 @@ img {
 
 .social-btn:active {
   background-color: #d7373b;
+  box-shadow: inset 0 3px rgba(0, 1, 1, 0.1);
 }
 
 .social-btn-vk {
@@ -796,7 +841,8 @@ img {
 /*---------------------------------------------------*/
 
 .modal-content-title {
-  margin-bottom: 39px;
+  margin: 0;
+  margin-bottom: 40px;
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
@@ -805,9 +851,12 @@ img {
 .write-form-field-1 label,
 .write-form-field-2 label,
 .write-form-field-3 label {
+  display: block;
+  width: 360px;
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
+  overflow: hidden;
 }
 
 .write-form input {
@@ -854,7 +903,7 @@ img {
 
 .write-info-button {
   width: 260px;
-  margin-top: 47px;
+  margin-top: 48px;
 }
 
 .write-form input:hover {
@@ -886,6 +935,8 @@ img {
 }
 
 .catalog-subtitle h1 {
+  margin: 0px;
+  padding: 0px;
   padding-top: 78px;
   padding-bottom: 108px;
   font-size: 55px;
@@ -898,6 +949,7 @@ img {
 
 .catalog-filter {
   float: left;
+  width: 260px;
   min-height: 300px;
   padding-bottom: 30px;
 }
@@ -920,16 +972,16 @@ img {
 
 .range-filter {
   width: 260px;
-  margin-top: 59px;
-  margin-bottom: 58px;
+  margin-top: 60px;
+  margin-bottom: 59px;
 }
 
 .range-controls {
   position: relative;
   margin-top: 52px;
-  margin-bottom: 14px;
-  padding-top: 39px;
-  padding-bottom: 39px;
+  margin-bottom: 13px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   padding-left: 21px;
   padding-right: 21px;
   background: #eeeeee;
@@ -1013,7 +1065,7 @@ img {
 }
 
 .field li {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 20px;
 }
@@ -1023,17 +1075,20 @@ img {
   color: #283136;
 }
 
-.selection-grid legend,
+.selection-grid legend {
+  margin-bottom: 20px;
+}
+
 .selection-specification legend {
-  margin-bottom: 19px;
+  margin-bottom: 21px;
 }
 
 .selection-grid {
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .selection-specification {
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .login-radio input[type="radio"],
@@ -1053,6 +1108,12 @@ img {
   color: #000000;
 }
 
+.login-radio:disabled,
+.login-checkbox:disabled {
+  color: rgba(40, 49, 54, 0.3);
+  cursor: default;
+}
+
 /*=========================radio  checkbox======================*/
 
 .radio-indicator {
@@ -1068,6 +1129,10 @@ img {
 
 .radio-indicator:hover {
   opacity: 1;
+}
+
+.radio-indicator:disabled {
+  opacity: 0.1;
 }
 
 .login-radio input[type="radio"]:checked + .radio-indicator {
@@ -1087,6 +1152,10 @@ img {
 
 .checkbox-indicator:hover {
   opacity: 1;
+}
+
+.checkbox-indicator:disabled {
+  opacity: 0.1;
 }
 
 .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
@@ -1122,10 +1191,32 @@ img {
 .sorting {
   width: 100%;
   min-height: 10px;
-  font-size: 0;
   margin-bottom: 20px;
   text-transform: uppercase;
   box-sizing: border-box;
+}
+
+.sorting::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.sorting-heading {
+  float: left;
+  width: 160px;
+  margin-right: 40px;
+}
+
+.sorting-activity {
+  float: left;
+  width: 472px;
+  text-align: right;
+}
+
+.sorting-icon {
+  float: right;
+  max-width: 60px;
 }
 
 .sorting h4,
@@ -1136,6 +1227,7 @@ img {
 }
 
 .sorting h4 {
+  margin: 0;
   margin-right: 267px;
   font-size: 18px;
   font-weight: 700;
@@ -1143,11 +1235,15 @@ img {
 }
 
 .sorting a {
-  margin-right: 25px;
+  margin-left: 25px;
   font-size: 14px;
   font-weight: 400;
   line-height: 15px;
   text-decoration: none;
+}
+
+a.activity-2 {
+  margin-left: 21px;
 }
 
 .activity-2,
@@ -1174,13 +1270,12 @@ img {
 }
 
 .sorting .icon-1 {
-  margin-left: 25px;
-  margin-right: 20px;
   background: url("../img/sprite.png") no-repeat;
   background-position: -30px -281px;
 }
 
 .sorting .icon-2 {
+  margin-left: 17px;
   background: url("../img/sprite.png") no-repeat;
   background-position: -99px -281px;
   opacity: 0.2;
@@ -1199,67 +1294,79 @@ img {
 /*========================catalog-list==========================*/
 
 .catalog-list {
-  min-height: 300px;
   font-size: 0;
 }
 
 /*---------------------------------*/
 
-.catalog-item-img {
+.catalog-item {
   position: relative;
   display: inline-block;
   vertical-align: top;
   width: 360px;
-  height: 576px;
   margin-right: 40px;
-  margin-top: 77px;
+  margin-top: 37px;
+  padding-top: 40px;
+  background-color: #e9e9e9;
   box-sizing: border-box;
 }
 
-.catalog-item-img:nth-child(2n){
-  margin-right: 0;
-}
-
-.catalog-item-decor {
+.catalog-item::after {
   position: absolute;
-  top: -40px;
-  z-index: 100;
-  width: 360px;
-  height: 40px;
+  top: 0px;
+  left: 1px;
+  z-index: 10;
+  display: block;
+  content: "";
+  width: 358px;
+  height: 41px;
   border-radius: 2px 2px 0 0;
   background-color: #e9e9e9;
   transition: background-color .3s linear;
 }
 
-.catalog-item-decor:after,
-.catalog-item-decor:before {
+.catalog-item::before {
   position: absolute;
+  top: 14px;
+  left: 16px;
+  z-index: 100;
   display: block;
-  top: 13px;
   content: "";
   width: 14px;
   height: 14px;
   background-color: #ffffff;
   border-radius: 50%;
+  box-shadow: 23px 0 0 0 #ffffff, 46px 0 0 0 #ffffff;
 }
 
-.catalog-item-decor:after {
-  left: 16px;
+.catalog-item-img img {
+  width: 360px;
+  height: 576px;
 }
 
-.catalog-item-decor:before {
-  left: 39px;
-  box-shadow: 23px 0 0 0 #ffffff;
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
+}
+
+.catalog-item:hover {
+  background-color: #e5e5e5;
+  box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
+}
+
+.catalog-item:hover::after {
+  background-color: #4d4d4d;
 }
 
 .catalog-item-description {
   position: absolute;
   bottom: 0px;
-  left: 0px;
+  left: 1px;
   display: block;
-  width: 100%;
-  height: 231px;
-  padding: 31px 67px;
+  width: 358px;
+  padding-left: 66px;
+  padding-right: 66px;
+  padding-top: 30px;
+  padding-bottom: 107px;
   background-color: #eeeeee;
   opacity: 0;
   text-align: center;
@@ -1268,7 +1375,7 @@ img {
 }
 
 .catalog-item-description a {
-  font: 700 18px/23px "Roboto", "Arial", sans-serif;
+  font: 700 18px/24px "Roboto", "Arial", sans-serif;
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
@@ -1283,7 +1390,7 @@ img {
 
 .catalog-item-buy {
   position: absolute;
-  left: 80px;
+  left: 79px;
   bottom: 43px;
   display: block;
   width: 200px;
@@ -1294,16 +1401,8 @@ img {
   color: #ffffff;
 }
 
-.catalog-item-img:hover {
-  box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);
-}
-
-.catalog-item-img:hover .catalog-item-description {
+.catalog-item:hover .catalog-item-description {
   opacity: 1;
-}
-
-.catalog-item-img:hover .catalog-item-decor {
-  background-color: #4d4d4d;
 }
 
 /*===========================paginator=====================*/
@@ -1311,14 +1410,14 @@ img {
 .paginator {
   clear: both;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 61px;
   margin-bottom: 60px;
-  box-sizing: border-box;
   font-size: 0;
+  box-sizing: border-box;
 }
 
 .paginator a {
-  margin-right: 11px;
+  margin-right: 12px;
   padding-right: 20px;
   padding-left: 20px;
   color: #000000;
