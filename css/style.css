@@ -678,8 +678,7 @@ img {
 
 .section-footer-map {
   height: 416px;
-  /*background: #f1efe8 url("../img/map-marker.png") center top no-repeat;*/
-  background: #f1efe8;
+  background: #f1efe8 url("../img/map-marker.png") center top no-repeat;
 }
 
 .interactive-map {
@@ -813,6 +812,15 @@ img {
 
 /*=============================modal-content======================*/
 
+@keyframes movement {
+  0% {
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .modal-content {
   position: fixed;
   left: 50%;
@@ -832,6 +840,7 @@ img {
 
 .modal-content-show {
   display: block;
+  animation: movement 0.8s;
 }
 
 .modal-content-close {
@@ -1462,6 +1471,3 @@ a.activity-2 {
 }
 
 /*------------------------------------------*/
-.paginator .disabled:active {
-  color: green;
-}
