@@ -1463,5 +1463,5 @@ a.activity-2 {
 
 /*------------------------------------------*/
 .paginator .disabled:active {
-  color: green;
+  color: dark;
 }
