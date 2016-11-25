@@ -459,6 +459,7 @@ img {
 .index-content-left {
   float: left;
   width: 660px;
+  padding-bottom: 49px;
 }
 
 .index-content-left .statement {
@@ -467,6 +468,17 @@ img {
   font-size: 45px;
   font-weight: 500;
   line-height: 45px;
+}
+
+.dash {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 4px;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: 8px;
+  background: #000000;
 }
 
 .index-content-left .declaration {
@@ -666,7 +678,14 @@ img {
 
 .section-footer-map {
   height: 416px;
-  background: #f1efe8 url("../img/map-marker.png") center top no-repeat;
+  /*background: #f1efe8 url("../img/map-marker.png") center top no-repeat;*/
+  background: #f1efe8;
+}
+
+.interactive-map {
+  width: 100%;
+  height: 416px;
+  border: 0;
 }
 
 /*================footer-map-inner========================*/
@@ -916,7 +935,7 @@ img {
 
 /*==============================overlay=====================*/
 
-.modal-overlay {
+/*.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -925,7 +944,7 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   display: none;
-}
+}*/
 
 /*=======================catalog.html=========================*/
 
@@ -1091,8 +1110,8 @@ img {
   margin-bottom: 29px;
 }
 
-.login-radio input[type="radio"],
-.login-checkbox input[type="checkbox"] {
+.selection-grid input[type="radio"],
+.selection-specification input[type="checkbox"] {
   display: none;
 }
 
@@ -1108,18 +1127,13 @@ img {
   color: #000000;
 }
 
-.login-radio:disabled,
-.login-checkbox:disabled {
-  color: rgba(40, 49, 54, 0.3);
-  cursor: default;
-}
-
 /*=========================radio  checkbox======================*/
 
-.radio-indicator {
+.login-radio::after {
   position: absolute;
   top: -2px;
   left: 0px;
+  content: "";
   width: 25px;
   height: 25px;
   background: url("../img/sprite.png") no-repeat;
@@ -1127,22 +1141,19 @@ img {
   opacity: 0.4;
 }
 
-.radio-indicator:hover {
+.login-radio:hover::after {
   opacity: 1;
 }
 
-.radio-indicator:disabled {
-  opacity: 0.1;
-}
-
-.login-radio input[type="radio"]:checked + .radio-indicator {
+.selection-grid input[type="radio"]:checked + .login-radio::after {
   background-position: -258px -196px;
 }
 
-.checkbox-indicator {
+.login-checkbox::after {
   position: absolute;
   top: -2px;
   left: 0px;
+  content: "";
   width: 27px;
   height: 25px;
   background: url("../img/sprite.png") no-repeat;
@@ -1150,15 +1161,11 @@ img {
   opacity: 0.4;
 }
 
-.checkbox-indicator:hover {
+.login-checkbox:hover::after {
   opacity: 1;
 }
 
-.checkbox-indicator:disabled {
-  opacity: 0.1;
-}
-
-.login-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+.selection-specification input[type="checkbox"]:checked + .login-checkbox::after {
   background-position: -113px -30px;
 }
 
